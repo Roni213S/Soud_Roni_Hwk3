@@ -1,0 +1,127 @@
+body {
+    /* these properties are inherited by children elements */
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fff;
+    background-image: url(../images/desk-bg.jpg);
+    background-size: 100%;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+header > h1 {
+    text-align: center;
+    padding: 10px;
+    margin: 40px 30%;
+    text-decoration: underline;
+    color: rgb(219, 192, 255);
+    background-color: rgba(132, 0, 255, 0.5);
+}
+
+article {
+    width: 500px;
+    border: 4px solid #fff;
+    border-radius: 8px;
+    margin: 10px;
+    background-color: rgba(255, 255, 255, 0.78);
+}
+
+article > h2 {
+    color: rgb(255, 38, 38);
+    padding: 4px 10px;
+}
+
+article:first-of-type {
+    border: 4px solid rgb(255, 38, 38);
+}
+
+#world {
+    border: 4px solid rgb(0, 105, 0);
+}
+
+#world h2 {
+    color: rgb(0, 105, 0);
+}
+
+#magic {
+    border: 4px solid rgb(128, 31, 255);
+}
+
+#magic h2 {
+    color: rgb(128, 31, 255);
+}
+
+#chapters {
+    border: 4px solid rgb(30, 30, 255);
+}
+
+#chapters h2 {
+    color: rgb(30, 30, 255);
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+ul li {
+    padding: 10px;
+}
+
+li {
+    position: relative;
+}
+
+.characters li:nth-child(odd) {
+    background-color: rgba(255, 0, 0, 0.6);
+}
+.characters li:nth-child(even) {
+    color: rgb(255, 45, 45);
+}
+
+.world li:nth-child(odd) {
+    background-color: rgba(0, 125, 0, 0.6);
+}
+.world li:nth-child(even) {
+    color: rgb(0, 150, 0);
+}
+
+.magic li:nth-child(odd) {
+    background-color: rgba(128, 31, 255, 0.6);
+}
+.magic li:nth-child(even) {
+    color: rgb(128, 31, 255);
+}
+
+.chapters li:nth-child(odd) {
+    background-color: rgba(30, 30, 255, 0.6);
+}
+.chapters li:nth-child(even) {
+    color: rgb(30, 30, 255);
+}
+
+input[type="checkbox"] {
+    margin-right: 10px
+}
+
+input[type="checkbox"] + span::after {
+    content: '\1F389';
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    font-size: 24px;
+    position: absolute;
+    top: 5px;
+    right: 250px;
+    opacity: 0;
+    transition: opacity .5s ease-in-out;
+}
+
+input[type="checkbox"]:checked + span::after {
+    opacity: 1;
+}
